@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Music</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Atest compiled and minified CSS -->
+
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+      <!-- Optional theme -->
+
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+
+    </head>
+    <body>
+
+
+
+      
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3"> 
+            <h3>Choose a scale</h3>
+              <select id="chooseScale">
+                  <option value="maior">Escala Maior</option>
+                  <option value="menor">Escala Menor</option>
+                  <option value="menorharmonica">Escala Menor Harmônica</option>
+                  <option value="hexasafonica">Escala Hexafonica</option>
+                  <option value="blue">Blues</option>
+              </select>
+          </div>
+          <div class="col-xs-3"> 
+            <h3>Choose a Note</h3>
+              <select id="chooseANote">
+                <option value="0" selected>C</option>
+                <option value="1">C#</option>
+                <option value="2">D</option>
+                <option value="3">D#</option>
+                <option value="4">E</option>
+                <option value="5">F</option>
+                <option value="6">F#</option>
+                <option value="7">G</option>
+                <option value="8">G#</option>
+                <option value="9">A</option>
+                <option value="10">A#</option>
+                <option value="11">B</option>
+              </select>
+          </div>
+
+          <div class="col-xs-6">
+            <h3>Your notes &nbsp&nbsp<small><span id="tons"></span></small></h3>
+              <table class="table table-bordered yourNotes">
+                  <tr id="yourScalesNotes">
+                  </tr>
+              </table>
+          </div>
+
+        </div>
+      </div>
+
+
+
+<hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+          <h3>Your strings</h3>
+
+          <div class="col-xs-2">
+            <p>1st string</p>
+            
+            <select class="changingTuneString" id="0">
+              <option value="c">C</option>
+              <option value="c#">C#</option>
+              <option value="d">D</option>
+              <option value="d#">D#</option>
+              <option value="e" selected>E</option>
+              <option value="f">F</option>
+              <option value="f#">F#</option>
+              <option value="g">G</option>
+              <option value="g#">G#</option>
+              <option value="a">A</option>
+              <option value="a#">A#</option>
+              <option value="b">B</option>
+              
+            </select>
+          </div>  
+
+          <div class="col-xs-2">
+            <p>2nd string</p>
+            
+            <select class="changingTuneString" id="1">
+              <option value="c">C</option>
+              <option value="c#">C#</option>
+              <option value="d">D</option>
+              <option value="d#">D#</option>
+              <option value="e">E</option>
+              <option value="f">F</option>
+              <option value="f#">F#</option>
+              <option value="g">G</option>
+              <option value="g#">G#</option>
+              <option value="a">A</option>
+              <option value="a#">A#</option>
+              <option value="b" selected>B</option>
+              
+            </select>
+          </div> 
+
+          <div class="col-xs-2">
+            <p>3rd string</p>
+            
+            <select class="changingTuneString" id="2">
+              <option value="c">C</option>
+              <option value="c#">C#</option>
+              <option value="d">D</option>
+              <option value="d#">D#</option>
+              <option value="e">E</option>
+              <option value="f">F</option>
+              <option value="f#">F#</option>
+              <option value="g" selected>G</option>
+              <option value="g#">G#</option>
+              <option value="a">A</option>
+              <option value="a#">A#</option>
+              <option value="b">B</option>
+              
+            </select>
+          </div>  
+
+          <div class="col-xs-2">
+            <p>4th string</p>
+            
+            <select class="changingTuneString" id="3">
+              <option value="c">C</option>
+              <option value="c#">C#</option>
+              <option value="d" selected>D</option>
+              <option value="d#">D#</option>
+              <option value="e">E</option>
+              <option value="f">F</option>
+              <option value="f#">F#</option>
+              <option value="g">G</option>
+              <option value="g#">G#</option>
+              <option value="a">A</option>
+              <option value="a#">A#</option>
+              <option value="b">B</option>
+              
+            </select>
+          </div>  
+
+          <div class="col-xs-2">
+            <p>5th string</p>
+            
+            <select class="changingTuneString" id="4">
+              <option value="c">C</option>
+              <option value="c#">C#</option>
+              <option value="d">D</option>
+              <option value="d#">D#</option>
+              <option value="e">E</option>
+              <option value="f">F</option>
+              <option value="f#">F#</option>
+              <option value="g">G</option>
+              <option value="g#">G#</option>
+              <option value="a" selected>A</option>
+              <option value="a#">A#</option>
+              <option value="b">B</option>
+              
+            </select>
+          </div>  
+
+
+        <div class="col-xs-2">
+          <p>6th string</p>
+          
+          <select class="changingTuneString" id="5">
+            <option value="c">C</option>
+            <option value="c#">C#</option>
+            <option value="d">D</option>
+            <option value="d#">D#</option>
+            <option value="e" selected>E</option>
+            <option value="f">F</option>
+            <option value="f#">F#</option>
+            <option value="g">G</option>
+            <option value="g#">G#</option>
+            <option value="a">A</option>
+            <option value="a#">A#</option>
+            <option value="b">B</option>
+            
+          </select>
+        </div>  
+
+
+        </div>
+        </div>  
+      </div>  
+<hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <h3>Your scale</h3>
+            <!-- <a href="" class="btn btn-default">testando</a><p class="text-danger">testando cor</p> -->
+
+
+            <table id="mainTable" class="table table-bordered text-center">
+              <tr class="text-center up-left-border">
+                <th class="frets up-left-border">0</th>
+                <th class="frets">1</th>
+                <th class="frets">2</th>
+                <th class="frets">3</th>
+                <th class="frets">4</th>
+                <th class="frets">5</th>
+                <th class="frets">6</th>
+                <th class="frets">7</th>
+                <th class="frets">8</th>
+                <th class="frets">9</th>
+                <th class="frets">10</th>
+                <th class="frets">11</th>
+                <th class="frets">12</th>
+                <th class="frets">13</th>
+                <th class="frets">14</th>
+                <th class="frets">15</th>
+                <th class="frets">16</th>
+                <th class="frets">17</th>
+                <th class="frets">18</th>
+                <th class="frets">19</th>
+                <th class="frets">20</th>
+                <th class="frets">21</th>
+                <th class="frets">22</th>
+                <th class="frets">23</th>
+                <th class="frets">24</th>
+              </tr>
+
+              <tr id="emptyRow">
+                <td class="emptyRowClass"></td>
+              </tr>
+
+              <tr id="corda0">
+              </tr>
+              
+              <tr id="corda1">
+              </tr>
+
+              <tr id="corda2">
+              </tr>
+
+              <tr id="corda3">
+              </tr>
+
+              <tr id="corda4">
+              </tr>
+
+              <tr id="corda5">
+              </tr>
+
+            </table>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h6>https://www.eduardofeldberg.com.br/aula-17</h6>
+            <h6>http://site112.com/tabela-cores-html</h6>
+            <h6>https://en.wikipedia.org/wiki/List_of_musical_scales_and_modes</h6>
+            <h6>http://musictheorysite.com/major-scales/list-of-all-major-scales/</h6>
+            <h6>https://www.mymusictheory.com/learn-music-theory/reference/381-list-of-musical-scales/</h6>
+            <h6>http://www.piano-lessons-made-simple.com/list-of-musical-scales.html - (this)</h6>
+            <h6>https://www.piano-lessons-info.com/list-of-musical-scales.html - (this)</h6>
+          </div>
+        </div>
+      </div> -->
+
+
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="jquery/jquery-3.2.1.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+
+    </body>
+    </html>
+
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+
+  changingTuningString(4,0); // 4 = E 
+  changingTuningString(11,1); // 4 = E 
+  changingTuningString(7,2); // 4 = E 
+  changingTuningString(2,3); // 4 = E 
+  changingTuningString(9,4); // 4 = E 
+  changingTuningString(4,5); // 4 = E 
+
+  
+  var choosedScale=["T","T","St","T","T","T","St"]; //initial scale // escala maior
+  
+  generetingTheMainScale(choosedScale,0);
+
+
+  filteringNotes();
+
+
+
+  
+  function generetingTheMainScale(choosedScale,initialScaleIndexReceived){
+
+    // alert("generetingTheMainScale function\nchoosedScale: "+choosedScale+".\ninitialScaleIndexReceived: "+initialScaleIndexReceived);
+    //  ############# MAIN CODE TO GENERATE THE SCALE #############  //
+    var escala = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B","C","C#","D","D#","E","F","F#","G","G#","A","A#","B","C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
+    var scaleInterval = choosedScale;
+    var intervalArray =[];
+    var finalScale = [];
+    var finalNote = 0;
+    var initialScaleIndex = initialScaleIndexReceived;
+    finalScale[0] = escala[0+initialScaleIndex];
+    
+    var yourScalesNotes = "";
+
+    console.log("-------------Iniciando-------------");
+
+
+    for(i=0; i<7; i++){
+
+      var interval;
+
+      if(scaleInterval[i]=="T"){
+        interval = 2;
+      }else if(scaleInterval[i]=="T+St"){
+        interval = 3;      
+      }else if(scaleInterval[i]=="2T"){
+        interval = 4;
+      }else if(scaleInterval[i]=="St"){
+        interval = 1;
+      }
+      intervalArray[i] = interval; 
+
+      // console.log("Scale: " +scaleInterval[i]+" . Logo, intervalo: " +intervalArray[i]+". E nota final: " +finalScale[i]+". E finalNote: " + finalNote+" .I = "+i);
+
+
+      finalNote = finalNote + interval;
+      finalScale[i+1] = escala[finalNote+initialScaleIndex];
+      var grau = i+1;
+      yourScalesNotes +="<td class='yourNotes' id='"+grau+"grau'>"+finalScale[i]+"</td>"
+      $("#yourScalesNotes").html(yourScalesNotes);
+    }
+    //  ############# MAIN CODE TO GENERATE THE SCALE #############  //
+
+
+    filteringNotes();
+  }
+  
+
+
+
+    function filteringNotes(){
+    //  ############# CHANGING COLOR OF BG TD DEPENDING ON TUNING NOTE #############  //
+
+    // $( "td:contains('D')" ).css( "color", "red" ); //finds whatever element that CONTAINS this string, not the specif ones
+    var note1grau = $("#1grau").html();
+    var note2grau = $("#2grau").html();
+    var note3grau = $("#3grau").html();
+    var note4grau = $("#4grau").html();
+    var note5grau = $("#5grau").html();
+    var note6grau = $("#6grau").html();
+    var note7grau = $("#7grau").html();
+
+    $("td").css("background-color","transparent");
+    $("td").css("border-width","none");
+    $("td").css("border-color","default");
+    $("td").css("color","initial");
+
+    var bgcolor = "#444";
+    var fontColor = "white";
+
+    $("td").not(".emptyRowClass").css("background-color", "#d9d9d9");
+
+    
+
+    $("td").filter(function() {
+      return $(this).text() === note1grau;
+    }).css("background-color", "#111111").css("color",fontColor);
+
+    $("td").filter(function() {
+      return $(this).text() === note2grau;
+    }).css("background-color", bgcolor).css("color",fontColor);;
+
+    $("td").filter(function() {
+      return $(this).text() === note3grau;
+    }).css("background-color", bgcolor).css("color",fontColor);;
+
+    $("td").filter(function() {
+      return $(this).text() === note4grau;
+    }).css("background-color", bgcolor).css("color",fontColor);;
+
+    $("td").filter(function() {
+      return $(this).text() === note5grau;
+    }).css("background-color", bgcolor).css("color",fontColor);;
+
+    $("td").filter(function() {
+      return $(this).text() === note6grau;
+    }).css("background-color", bgcolor).css("color",fontColor);;
+
+    $("td").filter(function() {
+      return $(this).text() === note7grau;
+    }).css("background-color", bgcolor).css("color",fontColor);;
+    //  ############# CHANGING COLOR OF BG TD DEPENDING ON TUNING NOTE #############  //  
+    }
+
+    
+    
+
+
+/*    $("#chooseScale").change(function() {
+      //alert( "Handler for .change() called." );
+      var id = $(this).attr("id");
+      var choosedScale=$(this).val();
+      var myChoosedScale;
+
+      switch(choosedScale){
+        case "maior":
+        myChoosedScale=["T","T","St","T","T","T","St"]; //initial scale // escala maior
+        break;
+        case "menor":
+        myChoosedScale=["T","St","T","T","St","T","T"];
+        break;
+        case "hexasafonica":
+        myChoosedScale=["T","T","T","T","T","T"];
+        break;
+        case "menorharmonica":
+        myChoosedScale=["T","St","T","T","St","T+St","St"];
+        break;
+
+      }
+
+      generetingTheMainScale(myChoosedScale);
+    });
+*/
+
+    $("#chooseScale").change(function() {
+      //alert( "Handler for .change() called." );
+      var id = $(this).attr("id");
+      var choosedScale=$(this).val();
+      var myChoosedScale = [];
+      // var choosedNote = $("#choosedNote").selected();
+      // alert("ois:" +choosedNote);
+
+      var choosedNote =$("#chooseANote").val();
+      // choosedNote = $('#chooseANote :selected').text();
+
+    choosedNote = parseInt(choosedNote);
+
+      myChoosedScale = choosingScale(choosedScale);
+      // alert(myChoosedScale);
+
+
+
+
+      generetingTheMainScale(myChoosedScale,choosedNote);
+
+      // convert array to string
+      blkstr = [];
+      $.each(myChoosedScale, function(idx2,val2) {                    
+        // var str = idx2 + ":" + val2; //outputs  0:T, 1:T...etc
+        var str =  val2;
+        blkstr.push(str);
+        myChoosedScale = blkstr.join("    &nbsp - &nbsp    ");
+      });
+
+
+      $("#tons").html(myChoosedScale);
+      // convert array to string
+
+    });
+
+
+    function choosingScale(myChoosedScale){
+      // alert(myChoosedScale);
+      switch(myChoosedScale){
+        case "maior":
+        myChoosedScale=["T","T","St","T","T","T","St"]; //initial scale // escala maior
+        break;
+        case "menor":
+        myChoosedScale=["T","St","T","T","St","T","T"];
+        break;
+        case "hexasafonica":
+        myChoosedScale=["T","T","T","T","T","T"];
+        break;
+        case "menorharmonica":
+        myChoosedScale=["T","St","T","T","St","T+St","St"];
+        break;
+        case "blue":    //3HS – WS –HS – HS – 3HS –  WS
+        myChoosedScale=["T+St","T","Ts","Ts","T+St","T"];
+        break;
+
+      }
+
+    // alert(myChoosedScale);
+      return myChoosedScale;
+
+    }
+
+
+
+
+
+    $( ".changingTuneString" ).change(function() {
+      //alert( "Handler for .change() called." );
+      var id = $(this).attr("id");
+      var note=$(this).val();
+
+      switch(note){
+        case "c":
+        note =  0;
+        break;
+
+        case "c#":
+        note =  1;
+        break;
+
+        case "d":
+        note =  2;
+        break;
+
+        case "d#":
+        note =  3;
+        break;
+
+        case "e":
+        note =  4;
+        break;
+
+        case "f":
+        note =  5;
+        break;
+
+        case "f#":
+        note =  6;
+        break;
+
+        case "g":
+        note =  7;
+        break;
+
+        case "g#":
+        note =  8;
+        break;
+
+        case "a":
+        note =  9;
+        break;
+
+        case "a#":
+        note =  10;
+        break;
+
+        case "b":
+        note =  11;
+        break;
+
+      }
+
+      // alert(note);
+      changingTuningString(note,id);
+      
+
+    });
+
+    
+
+    $("#chooseANote").change(function() {
+      //alert( "Handler for .change() called." );
+      var id = $(this).attr("id");
+      var choosedNote=$(this).val();
+      choosedNote = parseInt(choosedNote);
+
+
+      var choosedScale=$("#chooseScale").val();
+      // alert(choosedScale);
+      var myChoosedScale = [];
+
+
+      myChoosedScale = choosingScale(choosedScale);
+
+     // alert(choosedNote);
+
+      generetingTheMainScale(myChoosedScale,choosedNote);
+    });
+
+
+
+    function changingTuningString(note, id){
+      //  ############# CHANGING STRINGS TUNING TOM #############  //
+      var maxScale = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B","C","C#","D","D#","E","F","F#","G","G#","A","A#","B","C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
+      var initialScaleIndex = note;
+      var stringScale = [];
+      var corda0 = "";
+
+      for (var i = 0; i < 25; i++) {
+
+        stringScale[i] = maxScale[i+initialScaleIndex];
+        corda0 += "<td class='stringNotes'>"+stringScale[i]+"</td>";
+        $("#corda"+id).html(corda0);
+
+          // console.log(stringScale[i]);
+
+        };
+        //  ############# CHANGING STRINGS TUNING TOM #############  //
+
+        filteringNotes();
+
+    }
+
+
+
+
+
+    $(".frets").click(function(){
+        $(this).toggleClass("highlightedTd");
+    });
+
+
+
+
+
+  });
+</script>
+
+<style type="text/css">
+table {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+
+td {
+   line-height: 10px !important;
+   min-height: 10px !important;
+   height: 10px !important;
+   border-radius: 20px;
+}
+
+th {
+   line-height: 10px !important;
+   min-height: 10px !important;
+   height: 10px !important;
+   border-radius: 20px;
+}
+
+
+select{
+  background-color: #303030;
+  border-radius: 20px;
+  color:white;
+}
+
+td.yourNotes {
+  border: none !important;
+}
+table.yourNotes{
+  border: none !important;
+}
+td.stringNotes{
+ border-bottom: none !important; 
+ border-top: none !important; 
+ border: none !important;
+}
+.highlightedTd{
+  background-color: #990000;
+}
+
+.up-left-border{
+  border-radius: 15px !important;
+  background-color: #999999;
+  
+}
+th{
+  border: none !important;
+}
+#mainTable{
+ border: none !important; 
+}
+
+td.emptyRowClass{
+  line-height: 5px !important;
+  min-height: 5px !important;
+  height: 5px !important;
+  border: none !important;
+}
+
+#emptyRow{
+ line-height: 5px !important;
+ min-height: 5px !important;
+ height: 5px !important;
+}
+
+</style>
